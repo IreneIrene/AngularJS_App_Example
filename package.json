@@ -1,0 +1,8 @@
+{
+  "name": "angular-app",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "http-server": "^0.8.5"
+  }
+}

@@ -1,0 +1,20 @@
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+    display: none !important;
+}
+
+input[name="age"] {
+    width: 70px !important;
+}
+
+.fa {
+    cursor: pointer !important;
+}
+
+.spacer {
+    margin-bottom: 20px;
+}

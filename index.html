@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container" ng-controller="MainController as ctrl">
+    <div class="row">
+        <div class="col-md-12 spacer">
+            <h1 class="text-center">An AngularJS SPA Example</h1>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Form</div>
+                <div class="panel-body" ng-include="'form.html'"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="table-responsive" ng-include="'table.html'"></div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-messages/angular-messages.min.js"></script>
+<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="/bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

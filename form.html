@@ -1,0 +1,69 @@
+<form name="ctrl.form" ng-submit="ctrl.save()" novalidate>
+    <div class="form-group" ng-class="{ 'has-error': ctrl.form.firstname.$touched && ctrl.form.firstname.$invalid }">
+        <label>First Name *</label>
+        <input type="text" name="firstname" class="form-control text-capitalize"
+               ng-model="ctrl.formData.firstname"
+               ng-minlength="3"
+               ng-maxlength="15"
+               ng-pattern="/^[a-zA-Z]*$/"
+               required>
+        <div class="help-block" ng-messages="ctrl.form.firstname.$error" ng-if="ctrl.form.firstname.$touched" ng-cloak>
+            <p ng-message="pattern">First name must be letters only.</p>
+            <p ng-message="minlength">Your first name is too short.</p>
+            <p ng-message="maxlength">Your first name is too long.</p>
+            <p ng-message="required">First name is required.</p>
+        </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error': ctrl.form.lastname.$touched && ctrl.form.lastname.$invalid }">
+        <label>Last Name *</label>
+        <input type="text" name="lastname" class="form-control text-capitalize"
+               ng-model="ctrl.formData.lastname"
+               ng-minlength="3"
+               ng-maxlength="15"
+               ng-pattern="/^[a-zA-Z]*$/"
+               required>
+        <div class="help-block" ng-messages="ctrl.form.lastname.$error" ng-if="ctrl.form.lastname.$touched" ng-cloak>
+            <p ng-message="pattern">Last name must be letters only.</p>
+            <p ng-message="minlength">Your last name is too short.</p>
+            <p ng-message="maxlength">Your last name is too long.</p>
+            <p ng-message="required">Last name is required.</p>
+        </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error': ctrl.form.phone.$touched && ctrl.form.phone.$invalid }">
+        <label>Phone *</label>
+        <input type="text" name="phone" class="form-control"
+               ng-model="ctrl.formData.phone"
+               ng-pattern="ctrl.pattern"
+               required>
+        <div class="help-block" ng-messages="ctrl.form.phone.$error" ng-if="ctrl.form.phone.$touched" ng-cloak>
+            <p ng-message="pattern">Please enter a valid phone number.</p>
+            <p ng-message="required">Phone number is required.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Gender *</label>
+        <div class="radio">
+            <label>
+                <input type="radio" name="gender" value="male" ng-model="ctrl.formData.gender" required>
+                Male
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="gender" value="female" ng-model="ctrl.formData.gender">
+                Female
+            </label>
+        </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error': ctrl.form.age.$touched && ctrl.form.age.$invalid }">
+        <label>Age *</label>
+        <input type="number" name="age" min="12" max="99" class="form-control"
+               ng-model="ctrl.formData.age"
+               required>
+        <div class="help-block" ng-messages="ctrl.form.age.$error" ng-if="ctrl.form.age.$touched" ng-cloak>
+            <p ng-message="min">Age should be at least 12</p>
+            <p ng-message="required">Age is required.</p>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" ng-disabled="ctrl.form.$invalid">Sumbit</button>
+</form>

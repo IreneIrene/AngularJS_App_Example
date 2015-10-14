@@ -1,0 +1,12 @@
+{
+  "name": "angular-app",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-local-storage": "~0.2.2",
+    "bootstrap": "~3.3.5",
+    "angular-bootstrap": "~0.13.4",
+    "angular-messages": "~1.4.7"
+  }
+}
